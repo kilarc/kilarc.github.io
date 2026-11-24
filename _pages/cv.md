@@ -11,9 +11,8 @@ redirect_from:
 
 Education
 ======
-* Hankuk University of Foreign Studies (HUFS),
-B.S. in Statistics, Double Major in English Linguistics and Language Technology (ELLT)
-Mar 2023 – Present~
+* Hankuk University of Foreign Studies (HUFS), B.S. in Statistics, Double Major in English Linguistics and Language Technology (ELLT)
+  * Mar 2023 – Present
 
 Work experience
 ======
@@ -48,4 +47,7 @@ Teaching
   
 Service and leadership
 ======
-* -
+* Military Service, Republic of Korea Army
+  - Administrative Specialist, 32nd Infantry Division
+  - Honorably discharged as Sergeant
+  - Feb 2025 – Aug 2025
