@@ -5,10 +5,28 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+{% assign projects_by_year = site.portfolio | group_by_exp: 'project', "project.relative_path | split: '/' | slice: 1, 1 | first" %}
+{% assign years = site.data.portfolio_years %}
+{% for group in projects_by_year %}
+  {% assign year_number = group.name | plus: 0 %}
+  {% assign year_label = year_number | append: '' %}
+  {% if year_number >= 1000 and year_number <= 9999 and group.name == year_label %}
+    {% assign years = years | push: group.name %}
+  {% endif %}
+{% endfor %}
+{% assign years = years | uniq | sort | reverse %}
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+{% for year in years %}
+  {% assign year_group = projects_by_year | where: 'name', year | first %}
+  <details class="portfolio-year">
+    <summary>{{ year | escape }}</summary>
+    <div class="portfolio-year__projects">
+      {% for post in year_group.items reversed %}
+        {% include archive-single.html %}
+      {% else %}
+        <p>No projects yet.</p>
+      {% endfor %}
+    </div>
+  </details>
 {% endfor %}
 

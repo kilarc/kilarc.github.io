@@ -3,15 +3,16 @@
     ========================================================================== */
 
 /* Color codes used for the theme */
-$primary-color              : #173b25;
-$background                 : #000000;
-$surface                    : #0b1a10;
-$border                     : #3c6548;
-$text                       : #81ee9a;
-$muted-text                 : #99cfa4;
-$link                       : #a2ffb5;
-$link-hover                 : #d2ffdc;
-$link-visited               : #8bdc9d;
+$primary-color              : #1f2429;
+$background                 : #0e1116;
+$masthead-background        : #020409;
+$surface                    : #161b22;
+$border                     : #3e444c;
+$text                       : #e6edf3;
+$muted-text                 : #9198a1;
+$link                       : #58a6ff;
+$link-hover                 : #79c0ff;
+$link-visited               : #a5d6ff;
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
@@ -50,6 +51,11 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$muted-text};
     --global-thead-color                : #{$primary-color};
+
+    .masthead,
+    .masthead .greedy-nav {
+        background-color: $masthead-background;
+    }
 
     // Components with a fixed light background in the shared styles.
     .toc,

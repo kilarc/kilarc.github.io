@@ -243,3 +243,19 @@
     }
   }
 }
+/* Portfolio year disclosures */
+.portfolio-year {
+  margin: 0 0 0.75em;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+
+  > summary {
+    padding: 0.65em 1em;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  > .portfolio-year__projects {
+    padding: 0 1em 0.75em;
+  }
+}
