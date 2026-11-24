@@ -1,0 +1,32 @@
+.page__content {
+  .cw2-apa-heading {
+    text-align: center;
+  }
+
+  .cw2-references p {
+    padding-inline-start: 0.5in;
+    text-indent: -0.5in;
+    overflow-wrap: anywhere;
+  }
+
+  .cw2-figure {
+    display: block;
+
+    figcaption {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    .cw2-figure__note {
+      margin-bottom: 0;
+    }
+  }
+}

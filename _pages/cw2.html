@@ -1,0 +1,13 @@
+---
+layout: archive
+title: "CW2"
+permalink: /cw2/
+author_profile: true
+---
+
+{% assign essays = site.pages | where_exp: 'essay', 'essay.cw2_essay' | sort: 'cw2_essay' %}
+<ul>
+  {% for essay in essays %}
+    <li><a href="{{ essay.url | relative_url }}">Essay {{ essay.cw2_essay }} — {{ essay.title | escape }}</a></li>
+  {% endfor %}
+</ul>

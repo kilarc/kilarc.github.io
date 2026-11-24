@@ -11,5 +11,8 @@ main:
   - title: "Portfolio"
     url: /portfolio/
 
+  - title: "CW2"
+    url: /cw2/
+
   - title: "CV"
     url: /cv/
