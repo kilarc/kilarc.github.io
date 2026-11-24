@@ -1,0 +1,107 @@
+/* ==========================================================================
+    DEFAULT THEME - DARK VERSION
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #173b25;
+$background                 : #000000;
+$surface                    : #0b1a10;
+$border                     : #3c6548;
+$text                       : #81ee9a;
+$muted-text                 : #99cfa4;
+$link                       : #a2ffb5;
+$link-hover                 : #d2ffdc;
+$link-visited               : #8bdc9d;
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #2f7f93;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Dark theme for the site */
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$background};
+    --global-border-color               : #{$border};
+    --global-dark-border-color          : #{$border};
+    --global-code-background-color      : #{$surface};
+    --global-code-text-color            : #{$text};
+    --global-fig-caption-color          : #{$muted-text};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-hover};
+    --global-link-color-visited         : #{$link-visited};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$link-hover};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$muted-text};
+    --global-thead-color                : #{$primary-color};
+
+    // Components with a fixed light background in the shared styles.
+    .toc,
+    textarea,
+    select,
+    input:not([type="file"], [type="image"], [type="checkbox"], [type="radio"], [type="button"], [type="reset"], [type="submit"]) {
+        background-color: var(--global-code-background-color);
+        border-color: var(--global-border-color);
+    }
+
+    .toc .nav__title,
+    .social-icons .fa {
+        color: var(--global-text-color);
+    }
+
+    .author__urls::after {
+        border-color: var(--global-bg-color) transparent;
+    }
+
+    figcaption a:hover {
+        color: var(--global-link-color-hover);
+        border-bottom-color: currentColor;
+    }
+
+    :is(div.highlighter-rouge, figure.highlight)::before {
+        background-color: var(--global-bg-color);
+    }
+
+    .highlight span {
+        color: var(--global-code-text-color);
+    }
+
+    .highlight :is(.c, .c1, .cm, .cs, .cp) {
+        color: var(--global-fig-caption-color);
+    }
+
+    .highlight :is(.k, .kc, .kd, .kn, .kp, .kr, .kt, .s, .s1, .s2) {
+        color: var(--global-link-color-hover);
+    }
+
+    :is(.notice, .notice--primary, .notice--info, .notice--warning, .notice--success, .notice--danger) {
+        background-color: var(--global-code-background-color);
+        border-inline-start: 2px solid var(--global-border-color);
+
+        a { color: var(--global-link-color); }
+        a:hover { color: var(--global-link-color-hover); }
+        code { background-color: var(--global-bg-color); }
+    }
+
+    .notice--info { border-inline-start-color: $info-color; }
+    .notice--warning { border-inline-start-color: $warning-color; }
+    .notice--success { border-inline-start-color: $success-color; }
+    .notice--danger { border-inline-start-color: $danger-color; }
+}
+
