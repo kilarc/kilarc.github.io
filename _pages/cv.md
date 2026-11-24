@@ -21,8 +21,7 @@ Work experience
 Skills
 ======
 * -
-* -
-  * -
+  * 
 
 
 {% comment %}
