@@ -11,7 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in Statistics/English linguistics and language technology, Hankuk University of Foreign Studies, 2023~
+* Hankuk University of Foreign Studies (HUFS),
+B.S. in Statistics, Double Major in English Linguistics and Language Technology (ELLT)
+Mar 2023 – Present~
 
 Work experience
 ======
