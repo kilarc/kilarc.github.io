@@ -309,6 +309,14 @@
     white-space: nowrap;
   }
 
+  .author__affiliation {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
   a {
     display: block;
     margin-bottom: 5px;
