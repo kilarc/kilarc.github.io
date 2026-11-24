@@ -22,7 +22,7 @@ author_profile: true
     <summary>{{ year | escape }}</summary>
     <div class="portfolio-year__projects">
       {% for post in year_group.items reversed %}
-        {% include archive-single.html %}
+        {% include archive-single.html portfolio_year=true %}
       {% else %}
         <p>No projects yet.</p>
       {% endfor %}

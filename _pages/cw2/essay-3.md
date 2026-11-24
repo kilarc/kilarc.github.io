@@ -37,15 +37,10 @@ The third hidden cost is the exposure of important locations. CCTVs and other im
 
 There are risks of image surveillance, including the risk of unauthorized access to recorded images and other personal data, as well as misuse of biometric data and the risk of revealing sensitive locations and activities. Eliminating image surveillance is not practical, given the valuable contributions it can make to public safety, crime prevention, and the investigation of individual crimes. Thus, instead of trying to prevent the collection of data, organizations should concentrate on responsible management of already collected information. This means strong passwords and encryption, secure camera networks, and clear rules for storing and distributing recordings. Biometric information must be collected on the basis of a valid legal basis. The identification results must be used as evidence and must not be used to decide on the guilt of a person. Additionally, images of sensitive locations, such as military facilities, should be carefully reviewed before public disclosure. In addition, it has to be used only for purposes of value that contribute to public safety, crime prevention, or individual criminal investigations, and the information collected must be used responsibly. Ultimately, the effectiveness of image surveillance depends not only on the number of cameras installed but also on how responsibly the collected information is utilized. Future research should deeply examine whether or not these measures can reduce the misuse of surveillance data while protecting individual privacy and national security.
 
-**Figure 2**
-
-*Risks of Image Surveillance and the Proposed Measures*
-
-- Unauthorized viewing of recordings → Limit access, strengthen passwords and encryption, control the camera network, and set rules for storing and sharing images
-- Misuse of personal and biometric information → Collect biometric data only with a legitimate legal basis, and use it to support investigations, not decide them
-- Exposure of sensitive locations → Leave sensitive areas out of filming routes, or have the authorities review images before they are posted
-
-**Keep image data within its proper purpose**
+<figure class="cw2-figure">
+  <figcaption><strong>Figure 2</strong><br><em>Risks of Image Surveillance and the Proposed Measures</em></figcaption>
+  <img src="{{ '/images/cw2/essay-3-figure-2.png' | relative_url }}" alt="Three image surveillance risks and their safeguards, emphasizing that image data should be kept within its proper purpose." loading="lazy" width="500" height="345">
+</figure>
 
 ## References
 
