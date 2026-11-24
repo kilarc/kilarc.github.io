@@ -27,11 +27,11 @@ author:
   avatar           : "profile.png"
   name             : "Choi Kilho"
   pronouns         : # example: "she/her"  
-  bio              : # Short sidebar biography
+  bio              : "HUFS STAT 23"
   location         : # City or country
-  employer         : # University or organization
+  employer         : "HUFS(Hankuk University of Foreign Studies)"
   uri              : # URL
-  email            : # Public contact email
+  email            : "z-zxcvbnm@hufs.ac.kr"
 
   # Academic websites
   academia         : # URL
