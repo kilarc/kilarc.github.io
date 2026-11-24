@@ -20,7 +20,7 @@ Work experience
   
 Skills
 ======
-* -
+* 
   * 
 
 
