@@ -18,8 +18,8 @@ I'm currently interested in risk management and actuarial science, and I am prep
 I've also obtained various data- and finance-related certifications.
 I hope to work in the insurance industry using data analysis
 
-I'm interested in soccer and fashion, so my current research is using FM24 data, 
-create a model and verify whether player injury insurance for professional clubs can be applied to the K League
+I'm interested in soccer and fashion, so my current research is 
+create a model and verify whether player injury insurance for professional clubs can be applied to the K League using FM24 data,
 and the fashion elements each country values and how they influence and are influenced.
 
 This site introduces my coursework and projects, along with my CV.
