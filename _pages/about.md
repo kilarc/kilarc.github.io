@@ -6,7 +6,7 @@ redirect_from:
   - /about.html
 ---
 
-# About me
+# Introduce
 
 <!-- Write your introduction here. -->
 Hello, I'm Choi Kilho, born in 2004, Taean, South Korea
