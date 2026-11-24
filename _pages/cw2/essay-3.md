@@ -4,6 +4,10 @@ permalink: /portfolio/2026/cw2/essay-3/
 redirect_from:
   - /cw2/essay-3/
 cw2_essay: 3
+cw2_preview: >-
+  This essay examines three risks of image surveillance: unauthorized access to recordings,
+  misuse of biometric data, and exposure of sensitive locations. It proposes safeguards that
+  keep the use of recorded images within its intended public-safety purpose.
 author_profile: true
 ---
 

@@ -13,8 +13,17 @@ author_profile: true
 <p><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></p>
 
 {% assign essays = site.pages | where_exp: 'essay', 'essay.cw2_essay' | sort: 'cw2_essay' %}
-<ul>
+<ul class="cw2-essay-list">
   {% for essay in essays %}
-    <li><a href="{{ essay.url | relative_url }}">Essay {{ essay.cw2_essay }} — {{ essay.title | escape }}</a></li>
+    <li>
+      <a href="{{ essay.url | relative_url }}">Essay {{ essay.cw2_essay }} — {{ essay.title | escape }}</a>
+      {% assign preview = essay.cw2_preview | default: '' | strip %}
+      {% if preview != '' %}
+        <details class="cw2-preview">
+          <summary>Preview</summary>
+          <p>{{ preview | escape }}</p>
+        </details>
+      {% endif %}
+    </li>
   {% endfor %}
 </ul>

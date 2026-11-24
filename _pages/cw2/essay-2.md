@@ -4,6 +4,10 @@ permalink: /portfolio/2026/cw2/essay-2/
 redirect_from:
   - /cw2/essay-2/
 cw2_essay: 2
+cw2_preview: >-
+  This essay proposes a compensation process for people harmed by improperly parked shared bicycles or scooters.
+  It explains how evidence, operator records, and dispute resolution could support claims for medical expenses
+  and documented work-related losses.
 author_profile: true
 ---
 

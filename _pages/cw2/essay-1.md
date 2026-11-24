@@ -4,6 +4,10 @@ permalink: /portfolio/2026/cw2/essay-1/
 redirect_from:
   - /cw2/essay-1/
 cw2_essay: 1
+cw2_preview: >-
+  This essay examines why younger Koreans were more likely to oppose the 2025 National Pension reform.
+  It considers legal, political, and economic explanations and argues that differences in trust,
+  fairness, and expectations help explain the generational divide.
 author_profile: true
 ---
 
