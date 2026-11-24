@@ -1,11 +1,13 @@
 ---
 title: "How Can Individuals Be Compensated for Physical Injuries and Work-Related Losses Created by Shared Bicycles and Scooters?"
-permalink: /cw2/essay-2/
+permalink: /portfolio/2026/cw2/essay-2/
+redirect_from:
+  - /cw2/essay-2/
 cw2_essay: 2
 author_profile: true
 ---
 
-[CW2 essays]({{ '/cw2/' | relative_url }})
+[CW2 essays]({{ '/portfolio/2026/cw2/' | relative_url }})
 
 *Junkyo Kim and Kilho Choi*
 

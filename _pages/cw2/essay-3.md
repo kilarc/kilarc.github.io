@@ -1,11 +1,13 @@
 ---
 title: "Beyond the Camera Lens: Three Hidden Costs of Image Surveillance"
-permalink: /cw2/essay-3/
+permalink: /portfolio/2026/cw2/essay-3/
+redirect_from:
+  - /cw2/essay-3/
 cw2_essay: 3
 author_profile: true
 ---
 
-[CW2 essays]({{ '/cw2/' | relative_url }})
+[CW2 essays]({{ '/portfolio/2026/cw2/' | relative_url }})
 
 *Jun Kyo Kim and Kilho Choi*
 

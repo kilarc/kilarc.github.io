@@ -1,11 +1,13 @@
 ---
 title: "National Pension Reform and Generational Differences"
-permalink: /cw2/essay-1/
+permalink: /portfolio/2026/cw2/essay-1/
+redirect_from:
+  - /cw2/essay-1/
 cw2_essay: 1
 author_profile: true
 ---
 
-[CW2 essays]({{ '/cw2/' | relative_url }})
+[CW2 essays]({{ '/portfolio/2026/cw2/' | relative_url }})
 
 *Kilho Choi*
 
