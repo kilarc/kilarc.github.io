@@ -37,3 +37,12 @@
     "layout/sidebar",
     "layout/cw2"
 ;
+
+@include breakpoint($x-large) {
+  .layout--home {
+    .masthead__inner-wrap,
+    #main {
+      margin-inline: 0 auto;
+    }
+  }
+}
