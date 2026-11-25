@@ -12,10 +12,11 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const musicCover = carousel.querySelector("[data-music-cover]");
   const musicPlayer = carousel.querySelector("[data-music-player]");
   const interval = Number(carousel.dataset.interval) || 6000;
+  const pauseOnHover = carousel.hasAttribute("data-pause-on-hover");
   let current = 0;
   let timer;
   let rotating = !reducedMotion.matches;
-  let hovered = carousel.matches(":hover");
+  let hovered = pauseOnHover && carousel.matches(":hover");
   let playingMusic = false;
 
   function schedule() {
@@ -88,15 +89,17 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     updateRotation();
   });
 
-  carousel.addEventListener("pointerenter", (event) => {
-    if (event.pointerType === "touch") return;
-    hovered = true;
-    schedule();
-  });
-  carousel.addEventListener("pointerleave", () => {
-    hovered = false;
-    schedule();
-  });
+  if (pauseOnHover) {
+    carousel.addEventListener("pointerenter", (event) => {
+      if (event.pointerType === "touch") return;
+      hovered = true;
+      schedule();
+    });
+    carousel.addEventListener("pointerleave", () => {
+      hovered = false;
+      schedule();
+    });
+  }
   carousel.addEventListener("focusin", schedule);
   carousel.addEventListener("focusout", () => queueMicrotask(schedule));
   document.addEventListener("visibilitychange", schedule);

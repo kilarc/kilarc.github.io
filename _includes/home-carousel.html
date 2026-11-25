@@ -1,6 +1,6 @@
 {% assign heading_id = 'home-' | append: include.id | append: '-title' %}
 {% assign track_id = 'home-' | append: include.id | append: '-slides' %}
-<div class="home-carousel home-carousel--{{ include.variant }}" data-carousel data-interval="{{ include.interval }}" role="group" aria-roledescription="carousel"{% if include.title %} aria-labelledby="{{ heading_id }}"{% else %} aria-label="{{ include.label | escape }}"{% endif %}>
+<div class="home-carousel home-carousel--{{ include.variant }}" data-carousel data-interval="{{ include.interval }}"{% if include.variant == 'personal' %} data-pause-on-hover{% endif %} role="group" aria-roledescription="carousel"{% if include.title %} aria-labelledby="{{ heading_id }}"{% else %} aria-label="{{ include.label | escape }}"{% endif %}>
   <div class="home-section__header">
     {% if include.title %}<h2 id="{{ heading_id }}">{{ include.title }}</h2>{% endif %}
     <div class="home-section__actions">
