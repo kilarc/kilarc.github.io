@@ -1,0 +1,37 @@
+personal:
+  - title: "Feather"
+    description: "Nujabes · Sample track on YouTube"
+    url: https://www.youtube.com/watch?v=hQ5x8pHoIPA
+    # Robin Godefridi: https://www.pexels.com/photo/37173060/
+    image: /images/home/music.jpg
+    alt: "A vinyl record on a turntable"
+  - title: "Football & FM24"
+    description: "Football data and player injury research"
+    # Siarhei Nester: https://www.pexels.com/photo/28827841/
+    image: /images/home/football.jpg
+    alt: "A football match in a stadium under floodlights"
+  - title: "Photo journal"
+    description: "Instagram · Sample link"
+    url: https://www.instagram.com/
+    # Andrea De Santis: https://www.pexels.com/photo/8692830/
+    image: /images/home/photo-journal.jpg
+    alt: "A Seoul street lit by shop signs at night"
+
+portfolio:
+  - title: "National Pension Reform"
+    description: "Why younger and older Koreans responded differently to the 2025 reform."
+    url: /portfolio/2026/cw2/essay-1/
+    # Andre Tran: https://www.pexels.com/photo/38837815/
+    image: /images/home/pension.jpg
+    alt: "Pedestrians and traffic at a Seoul intersection"
+  - title: "Shared Bikes, Scooters & Injury Claims"
+    description: "A compensation process for people injured by improperly parked shared vehicles."
+    url: /portfolio/2026/cw2/essay-2/
+    image: /images/cw2/essay-2-figure-1.png
+    alt: "Chart of Seoul's towing rate from 2021 to 2023"
+    fit: contain
+  - title: "The Hidden Costs of Image Surveillance"
+    description: "Three risks of image surveillance and ways to reduce them."
+    url: /portfolio/2026/cw2/essay-3/
+    image: /images/cw2/essay-3-figure-1.png
+    alt: "Street View image with a facility blurred behind trees"

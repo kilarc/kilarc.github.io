@@ -1,0 +1,190 @@
+.layout--home .page {
+  @include breakpoint($large) {
+    padding-inline-end: 0;
+  }
+}
+
+.home-intro {
+  display: grid;
+  gap: 1.4rem;
+  align-items: start;
+
+  @include breakpoint($x-large) {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    column-gap: 2rem;
+  }
+}
+
+.home-section {
+  margin-block-start: 2.25rem;
+  padding-block-start: 1.2rem;
+  border-block-start: 1px solid var(--global-border-color);
+}
+
+.home-section__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem 0.75rem;
+  margin-block-end: 0.65rem;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  a {
+    font-size: 0.74rem;
+  }
+}
+
+.home-carousel--personal .home-section__header h2 {
+  font-size: 0.95rem;
+}
+
+.home-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.home-carousel__controls:not([hidden]) {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.home-carousel__controls button {
+  display: grid;
+  place-items: center;
+  min-inline-size: 1.8rem;
+  min-block-size: 1.8rem;
+  padding: 0.15rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.3rem;
+  background: var(--global-code-background-color);
+  color: var(--global-text-color);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--global-link-color);
+    color: var(--global-link-color-hover);
+  }
+}
+
+.home-carousel__track {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page__content .home-carousel__card {
+  display: grid;
+  align-items: stretch;
+  overflow: clip;
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.55rem;
+  background: var(--global-code-background-color);
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.page__content a.home-carousel__card:hover {
+  border-color: var(--global-link-color);
+  text-decoration: none;
+}
+
+.home-carousel__card:focus-visible,
+.home-carousel__controls button:focus-visible {
+  outline: 2px solid var(--global-link-color);
+  outline-offset: 2px;
+}
+
+.home-carousel__card .home-carousel__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.home-carousel__card .home-carousel__image--contain {
+  background: #f5f6f8;
+  object-fit: contain;
+}
+
+.home-carousel__caption {
+  align-self: center;
+  padding: 0.65rem 0.75rem;
+
+  h3 {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  p {
+    margin: 0.2rem 0 0;
+    font-size: 0.7rem;
+  }
+}
+
+.home-carousel--personal .home-carousel__caption {
+  min-block-size: 4.25rem;
+}
+
+.home-carousel--portfolio {
+  .home-carousel__card {
+    @include breakpoint($medium) {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    }
+  }
+
+  .home-carousel__card .home-carousel__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-carousel__caption {
+    padding: 1rem;
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    p {
+      font-size: 0.82rem;
+    }
+  }
+}
+
+.home-cv {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.55rem;
+  background: var(--global-code-background-color);
+
+  p {
+    margin: 0 0 0.3rem;
+  }
+
+  details {
+    margin-block-start: 0.7rem;
+    padding-block-start: 0.6rem;
+    border-block-start: 1px solid var(--global-border-color);
+    font-size: 0.85rem;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  ul {
+    margin-block: 0.4rem 0;
+  }
+}

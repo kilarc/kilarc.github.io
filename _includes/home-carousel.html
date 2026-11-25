@@ -1,0 +1,48 @@
+{% assign heading_id = 'home-' | append: include.id | append: '-title' %}
+{% assign track_id = 'home-' | append: include.id | append: '-slides' %}
+<div class="home-carousel home-carousel--{{ include.variant }}" data-carousel data-interval="{{ include.interval }}" role="group" aria-roledescription="carousel" aria-labelledby="{{ heading_id }}">
+  <div class="home-section__header">
+    <h2 id="{{ heading_id }}">{{ include.title }}</h2>
+    <div class="home-section__actions">
+      {% if include.archive %}
+        <a href="{{ '/portfolio/' | relative_url }}">View archive <span aria-hidden="true">&rarr;</span></a>
+      {% endif %}
+      <div class="home-carousel__controls" data-controls hidden>
+        <button type="button" data-previous aria-label="Previous slide" aria-controls="{{ track_id }}">&larr;</button>
+        <button type="button" data-next aria-label="Next slide" aria-controls="{{ track_id }}">&rarr;</button>
+        <button type="button" data-rotation aria-label="Pause slideshow" aria-controls="{{ track_id }}">
+          <span data-pause aria-hidden="true">Ⅱ</span>
+          <span data-play aria-hidden="true" hidden>▶</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <ul class="home-carousel__track" id="{{ track_id }}" data-track>
+    {% for slide in include.slides %}
+      <li class="home-carousel__slide" data-slide>
+        {% if slide.url %}
+          {% assign first_character = slide.url | slice: 0 %}
+          {% if first_character == '/' %}
+            {% assign slide_url = slide.url | relative_url %}
+          {% else %}
+            {% assign slide_url = slide.url %}
+          {% endif %}
+          <a class="home-carousel__card" href="{{ slide_url | escape }}">
+        {% else %}
+          <div class="home-carousel__card">
+        {% endif %}
+          <img class="home-carousel__image{% if slide.fit == 'contain' %} home-carousel__image--contain{% endif %}" src="{{ slide.image | relative_url }}" alt="{{ slide.alt | escape }}"{% unless forloop.first %} loading="lazy"{% endunless %} decoding="async">
+          <div class="home-carousel__caption">
+            <h3 data-slide-title>{{ slide.title | escape }}</h3>
+            {% if slide.description %}<p>{{ slide.description | escape }}</p>{% endif %}
+          </div>
+        {% if slide.url %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="visually-hidden" data-slide-status aria-live="polite" aria-atomic="true"></p>
+</div>
