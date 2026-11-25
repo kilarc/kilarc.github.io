@@ -49,6 +49,13 @@
             <div class="home-carousel__caption">
               <h3 data-slide-title>{{ slide.title | escape }}</h3>
               {% if slide.description %}<p>{{ slide.description | escape }}</p>{% endif %}
+              {% if slide.tags and slide.tags != empty %}
+                <ul class="home-carousel__tags" aria-label="Project keywords">
+                  {% for tag in slide.tags %}
+                    <li>#{{ tag | escape }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </div>
           {% if slide.url %}
             </a>

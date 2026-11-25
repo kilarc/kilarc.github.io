@@ -2,6 +2,8 @@
 
 $section-layout-width: 1520px;
 $section-content-offset: math.div(100% - span(10 of 12 last) + span(0.5 of 12 wide), 100%);
+$home-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+$home-column-gap: 2rem;
 
 @include breakpoint($x-large) {
   html:has(body.layout--sections) {
@@ -38,8 +40,8 @@ $section-content-offset: math.div(100% - span(10 of 12 last) + span(0.5 of 12 wi
   align-items: start;
 
   @include breakpoint($x-large) {
-    grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
-    column-gap: 2rem;
+    grid-template-columns: $home-columns;
+    column-gap: $home-column-gap;
     align-items: center;
   }
 }
@@ -272,12 +274,22 @@ $section-content-offset: math.div(100% - span(10 of 12 last) + span(0.5 of 12 wi
 }
 
 .home-carousel--portfolio {
+  .home-carousel__card {
+    @include breakpoint($x-large) {
+      grid-template-columns: $home-columns;
+      column-gap: $home-column-gap;
+    }
+  }
+
   .home-carousel__card .home-carousel__image {
     aspect-ratio: 16 / 9;
-    max-height: 19rem;
+    max-height: 15rem;
   }
 
   .home-carousel__caption {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
     padding: 1rem;
 
     h3 {
@@ -287,6 +299,21 @@ $section-content-offset: math.div(100% - span(10 of 12 last) + span(0.5 of 12 wi
     p {
       font-size: 0.82rem;
     }
+  }
+}
+
+.home-carousel__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  margin: auto 0 0;
+  padding: 0.9rem 0 0;
+  list-style: none;
+
+  li {
+    color: color-mix(in srgb, var(--global-link-color) 55%, var(--global-text-color));
+    font-size: 0.72rem;
+    font-weight: 600;
   }
 }
 

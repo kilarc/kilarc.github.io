@@ -20,30 +20,35 @@ personal:
 
 portfolio:
   - title: "National Pension Reform"
-    description: "Why younger and older Koreans responded differently to the 2025 reform."
+    description: "How younger and older Koreans responded to pension reform."
+    tags: [Pension, SouthKorea, Generations]
     url: /portfolio/2026/cw2/essay-1/
     # Andre Tran: https://www.pexels.com/photo/38837815/
     image: /images/home/pension.jpg
     alt: "Pedestrians and traffic at a Seoul intersection"
   - title: "Shared Bikes, Scooters & Injury Claims"
-    description: "A compensation process for people injured by improperly parked shared vehicles."
+    description: "A compensation process for injuries caused by shared bikes and scooters."
+    tags: [SharedMobility, InjuryClaims, Compensation]
     url: /portfolio/2026/cw2/essay-2/
     image: /images/cw2/essay-2-figure-1.png
     alt: "Chart of Seoul's towing rate from 2021 to 2023"
     fit: contain
   - title: "The Hidden Costs of Image Surveillance"
-    description: "Three risks of image surveillance and ways to reduce them."
+    description: "Three image surveillance risks and ways to reduce them."
+    tags: [Surveillance, Privacy, PublicSafety]
     url: /portfolio/2026/cw2/essay-3/
     image: /images/cw2/essay-3-figure-1.png
     alt: "Street View image with a facility blurred behind trees"
   - title: "FM24 Injury Data"
-    description: "A tool for extracting player injury data from FM24 saves for football insurance research."
+    description: "Player injury data extraction for football insurance research."
+    tags: [FM24, InjuryData, Insurance]
     url: https://github.com/kilarc/fmsave-fm24
     # Daniil Komov: https://www.pexels.com/photo/34804005/
     image: /images/home/fm24-research.jpg
     alt: "A laptop displaying data analysis software"
   - title: "Fashion Across Countries"
-    description: "An ongoing study of which fashion elements people value in different countries and how those preferences influence one another."
+    description: "Which fashion elements matter most in different countries?"
+    tags: [Fashion, Culture, CrossCountry]
     # Pexels: https://www.pexels.com/photo/1884581/
     image: /images/home/fashion-research.jpg
     alt: "Folded clothes and shoes on display shelves"
