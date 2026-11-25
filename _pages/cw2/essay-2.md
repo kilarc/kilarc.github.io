@@ -21,7 +21,7 @@ The problem of illegal parking is greater than an inconvenience. A parked shared
 
 <figure class="cw2-figure">
   <figcaption><strong>Figure 1</strong><br><em>Fluctuation of Towing Rates from 2021 to 2023 in Seoul</em></figcaption>
-  <img src="{{ '/images/cw2/essay-2-figure-1.png' | relative_url }}" alt="Chart showing that Seoul’s towing rate fell between 2021 and 2023." loading="lazy">
+  <img src="{{ '/images/cw2/essay-2-figure-1.png' | relative_url }}?v=20261125" alt="Chart showing that Seoul’s towing rate fell between 2021 and 2023." loading="lazy">
   <p class="cw2-figure__note"><em>Note.</em> Source: Asia Business Daily (2024)</p>
 </figure>
 
@@ -36,7 +36,7 @@ Yet the results leave room for improvements. Seoul received 141,031 complaints t
 
 <figure class="cw2-figure">
   <figcaption><strong>Figure 2</strong><br><em>Increase in Parking Violation Reports Between 2022 and 2023</em></figcaption>
-  <img src="{{ '/images/cw2/essay-2-figure-2.png' | relative_url }}" alt="Chart comparing parking violation reports in 2022 and 2023." loading="lazy">
+  <img src="{{ '/images/cw2/essay-2-figure-2.png' | relative_url }}?v=20261125" alt="Chart comparing parking violation reports in 2022 and 2023." loading="lazy">
   <p class="cw2-figure__note"><em>Note.</em> Source: Asia Business Daily (2024)</p>
 </figure>
 
