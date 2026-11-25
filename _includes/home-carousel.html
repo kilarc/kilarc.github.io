@@ -1,8 +1,8 @@
 {% assign heading_id = 'home-' | append: include.id | append: '-title' %}
 {% assign track_id = 'home-' | append: include.id | append: '-slides' %}
-<div class="home-carousel home-carousel--{{ include.variant }}" data-carousel data-interval="{{ include.interval }}" role="group" aria-roledescription="carousel" aria-labelledby="{{ heading_id }}">
+<div class="home-carousel home-carousel--{{ include.variant }}" data-carousel data-interval="{{ include.interval }}" role="group" aria-roledescription="carousel"{% if include.title %} aria-labelledby="{{ heading_id }}"{% else %} aria-label="{{ include.label | escape }}"{% endif %}>
   <div class="home-section__header">
-    <h2 id="{{ heading_id }}">{{ include.title }}</h2>
+    {% if include.title %}<h2 id="{{ heading_id }}">{{ include.title }}</h2>{% endif %}
     <div class="home-section__actions">
       {% if include.archive %}
         <a href="{{ '/portfolio/' | relative_url }}">View archive <span aria-hidden="true">&rarr;</span></a>
@@ -20,26 +20,41 @@
   <ul class="home-carousel__track" id="{{ track_id }}" data-track>
     {% for slide in include.slides %}
       <li class="home-carousel__slide" data-slide>
-        {% if slide.url %}
-          {% assign first_character = slide.url | slice: 0 %}
-          {% if first_character == '/' %}
-            {% assign slide_url = slide.url | relative_url %}
+        {% if slide.youtube_id %}
+          <div class="home-music" data-music>
+            <img class="home-music__cover" src="{{ slide.image | relative_url }}" alt="{{ slide.alt | escape }}" data-music-cover>
+            <div class="home-music__player" data-music-player hidden></div>
+            <div class="home-music__information">
+              <div>
+                <h3 data-slide-title>{{ slide.title | escape }}</h3>
+                <p>{{ slide.description | escape }}</p>
+                <a href="{{ slide.url | escape }}">YouTube Music <span aria-hidden="true">↗</span></a>
+              </div>
+              <button class="home-music__toggle" type="button" data-music-toggle="{{ slide.youtube_id | escape }}" aria-label="Play sample track" hidden>▶</button>
+            </div>
+          </div>
+        {% else %}
+          {% if slide.url %}
+            {% assign first_character = slide.url | slice: 0 %}
+            {% if first_character == '/' %}
+              {% assign slide_url = slide.url | relative_url %}
+            {% else %}
+              {% assign slide_url = slide.url %}
+            {% endif %}
+            <a class="home-carousel__card" href="{{ slide_url | escape }}">
           {% else %}
-            {% assign slide_url = slide.url %}
+            <div class="home-carousel__card">
           {% endif %}
-          <a class="home-carousel__card" href="{{ slide_url | escape }}">
-        {% else %}
-          <div class="home-carousel__card">
-        {% endif %}
-          <img class="home-carousel__image{% if slide.fit == 'contain' %} home-carousel__image--contain{% endif %}" src="{{ slide.image | relative_url }}" alt="{{ slide.alt | escape }}"{% unless forloop.first %} loading="lazy"{% endunless %} decoding="async">
-          <div class="home-carousel__caption">
-            <h3 data-slide-title>{{ slide.title | escape }}</h3>
-            {% if slide.description %}<p>{{ slide.description | escape }}</p>{% endif %}
-          </div>
-        {% if slide.url %}
-          </a>
-        {% else %}
-          </div>
+            <img class="home-carousel__image{% if slide.fit == 'contain' %} home-carousel__image--contain{% endif %}" src="{{ slide.image | relative_url }}" alt="{{ slide.alt | escape }}"{% unless forloop.first %} loading="lazy"{% endunless %} decoding="async">
+            <div class="home-carousel__caption">
+              <h3 data-slide-title>{{ slide.title | escape }}</h3>
+              {% if slide.description %}<p>{{ slide.description | escape }}</p>{% endif %}
+            </div>
+          {% if slide.url %}
+            </a>
+          {% else %}
+            </div>
+          {% endif %}
         {% endif %}
       </li>
     {% endfor %}

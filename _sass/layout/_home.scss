@@ -1,3 +1,25 @@
+@use "sass:math";
+
+$section-layout-width: 1520px;
+$section-content-offset: math.div(100% - span(10 of 12 last) + span(0.5 of 12 wide), 100%);
+
+.layout--sections {
+  @include breakpoint($x-large) {
+    .masthead__inner-wrap,
+    #main {
+      max-width: $section-layout-width;
+    }
+
+    .page,
+    .archive {
+      float: none;
+      width: auto;
+      margin-inline-start: calc((#{$x-large} - 2em) * #{$section-content-offset});
+      padding-inline-start: 0;
+    }
+  }
+}
+
 .layout--home .page {
   @include breakpoint($large) {
     padding-inline-end: 0;
@@ -10,9 +32,14 @@
   align-items: start;
 
   @include breakpoint($x-large) {
-    grid-template-columns: minmax(0, 1fr) 15rem;
+    grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
     column-gap: 2rem;
+    align-items: center;
   }
+}
+
+.home-intro__text p:last-child {
+  margin-block-end: 0;
 }
 
 .home-section {
@@ -38,10 +65,6 @@
   a {
     font-size: 0.74rem;
   }
-}
-
-.home-carousel--personal .home-section__header h2 {
-  font-size: 0.95rem;
 }
 
 .home-section__actions {
@@ -135,19 +158,117 @@
   }
 }
 
-.home-carousel--personal .home-carousel__caption {
-  min-block-size: 4.25rem;
-}
+.home-carousel--personal {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  max-width: 30rem;
+  justify-self: center;
 
-.home-carousel--portfolio {
+  @include breakpoint($x-large) {
+    max-width: none;
+  }
+
+  .home-section__header {
+    position: absolute;
+    z-index: 1;
+    inset: 0.55rem 0.55rem auto auto;
+    margin: 0;
+  }
+
+  .home-carousel__controls button {
+    background: rgba(13, 17, 23, 0.86);
+    border-color: rgba(255, 255, 255, 0.24);
+    color: #fff;
+  }
+
   .home-carousel__card {
-    @include breakpoint($medium) {
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    }
+    position: relative;
+    aspect-ratio: 1;
   }
 
   .home-carousel__card .home-carousel__image {
+    height: 100%;
+    aspect-ratio: 1;
+  }
+
+  .home-carousel__caption {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: #fff;
+  }
+}
+
+.home-music {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  aspect-ratio: 1;
+  padding: 1rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.55rem;
+  background: linear-gradient(160deg, #5a393b, #251e2f);
+  color: #fff;
+}
+
+.home-music__cover:not([hidden]) {
+  align-self: center;
+  justify-self: center;
+  width: 59%;
+  max-height: 90%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.home-music__player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.home-music__information {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 0.55rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  p,
+  a {
+    margin: 0.1rem 0 0;
+    font-size: 0.72rem;
+    color: #fff;
+  }
+}
+
+.home-music__toggle:not([hidden]) {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.3rem;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #362835;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.home-carousel--portfolio {
+  .home-carousel__card .home-carousel__image {
     aspect-ratio: 16 / 9;
+    max-height: 19rem;
   }
 
   .home-carousel__caption {

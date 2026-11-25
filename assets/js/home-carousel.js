@@ -8,20 +8,25 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const track = carousel.querySelector("[data-track]");
   const rotation = carousel.querySelector("[data-rotation]");
   const status = carousel.querySelector("[data-slide-status]");
+  const musicToggle = carousel.querySelector("[data-music-toggle]");
+  const musicCover = carousel.querySelector("[data-music-cover]");
+  const musicPlayer = carousel.querySelector("[data-music-player]");
   const interval = Number(carousel.dataset.interval) || 6000;
   let current = 0;
   let timer;
   let rotating = !reducedMotion.matches;
   let hovered = carousel.matches(":hover");
+  let playingMusic = false;
 
   function schedule() {
     clearTimeout(timer);
-    if (rotating && !hovered && !document.hidden && !track.contains(document.activeElement)) {
+    if (rotating && !playingMusic && !hovered && !document.hidden && !track.contains(document.activeElement)) {
       timer = setTimeout(() => show(current + 1), interval);
     }
   }
 
   function show(index, announce = false) {
+    if (playingMusic) closeMusic();
     slides[current].hidden = true;
     current = (index + slides.length) % slides.length;
     slides[current].hidden = false;
@@ -39,6 +44,39 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     schedule();
   }
 
+  function closeMusic() {
+    musicPlayer.replaceChildren();
+    musicPlayer.hidden = true;
+    musicCover.hidden = false;
+    musicToggle.textContent = "▶";
+    musicToggle.setAttribute("aria-label", "Play sample track");
+    playingMusic = false;
+  }
+
+  if (musicToggle) {
+    musicToggle.hidden = false;
+    musicToggle.addEventListener("click", () => {
+      if (playingMusic) {
+        closeMusic();
+      } else {
+        const frame = document.createElement("iframe");
+        frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(musicToggle.dataset.musicToggle)}?autoplay=1&rel=0`;
+        const title = musicToggle.closest("[data-music]").querySelector("[data-slide-title]").textContent;
+        frame.title = `${title} – YouTube player`;
+        frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        musicPlayer.append(frame);
+        musicPlayer.hidden = false;
+        musicCover.hidden = true;
+        musicToggle.textContent = "×";
+        musicToggle.setAttribute("aria-label", "Close music player");
+        playingMusic = true;
+        rotating = false;
+        updateRotation();
+      }
+      schedule();
+    });
+  }
+
   slides.slice(1).forEach((slide) => { slide.hidden = true; });
   controls.hidden = false;
 
@@ -46,6 +84,7 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   controls.querySelector("[data-next]").addEventListener("click", () => show(current + 1, true));
   rotation.addEventListener("click", () => {
     rotating = !rotating;
+    if (rotating && playingMusic) closeMusic();
     updateRotation();
   });
 

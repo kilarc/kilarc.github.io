@@ -38,12 +38,3 @@
     "layout/cw2",
     "layout/home"
 ;
-
-@include breakpoint($x-large) {
-  .layout--home {
-    .masthead__inner-wrap,
-    #main {
-      margin-inline: 0 auto;
-    }
-  }
-}

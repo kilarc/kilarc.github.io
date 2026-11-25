@@ -1,12 +1,13 @@
 personal:
   - title: "Feather"
-    description: "Nujabes · Sample track on YouTube"
-    url: https://www.youtube.com/watch?v=hQ5x8pHoIPA
+    description: "Nujabes · Sample track"
+    url: https://music.youtube.com/watch?v=hQ5x8pHoIPA
+    youtube_id: hQ5x8pHoIPA
     # Robin Godefridi: https://www.pexels.com/photo/37173060/
     image: /images/home/music.jpg
     alt: "A vinyl record on a turntable"
-  - title: "Football & FM24"
-    description: "Football data and player injury research"
+  - title: "Football"
+    description: "Matchday under the lights"
     # Siarhei Nester: https://www.pexels.com/photo/28827841/
     image: /images/home/football.jpg
     alt: "A football match in a stadium under floodlights"
@@ -35,3 +36,14 @@ portfolio:
     url: /portfolio/2026/cw2/essay-3/
     image: /images/cw2/essay-3-figure-1.png
     alt: "Street View image with a facility blurred behind trees"
+  - title: "FM24 Injury Data"
+    description: "A tool for extracting player injury data from FM24 saves for football insurance research."
+    url: https://github.com/kilarc/fmsave-fm24
+    # Daniil Komov: https://www.pexels.com/photo/34804005/
+    image: /images/home/fm24-research.jpg
+    alt: "A laptop displaying data analysis software"
+  - title: "Fashion Across Countries"
+    description: "An ongoing study of which fashion elements people value in different countries and how those preferences influence one another."
+    # Pexels: https://www.pexels.com/photo/1884581/
+    image: /images/home/fashion-research.jpg
+    alt: "Clothes on a rack"
