@@ -3,6 +3,12 @@
 $section-layout-width: 1520px;
 $section-content-offset: math.div(100% - span(10 of 12 last) + span(0.5 of 12 wide), 100%);
 
+@include breakpoint($x-large) {
+  html:has(body.layout--sections) {
+    scrollbar-gutter: stable;
+  }
+}
+
 .layout--sections {
   @include breakpoint($x-large) {
     .masthead__inner-wrap,
